@@ -18,6 +18,9 @@ ids_list_lower_than_700 = [hour['weather'][0]['id'] for hour in weather_data if 
 
 is_going_to_rain = len(ids_list_lower_than_700) > 0 # if there is at least one id less than 700, then it is going to rain
 if is_going_to_rain:
-    twilio_settings.send_sms(to_number='+573004934732', message='Bring an umbrella!')
+    twilio_settings.send_sms(
+        to_number='+573004934732', 
+        message='Bring an umbrella!')
+        
     print('Sending SMS...')
 
